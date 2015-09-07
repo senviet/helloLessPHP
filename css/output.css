@@ -1,0 +1,159 @@
+body{
+
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    font-size: 1em;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    background-color: #3498db;
+
+}
+
+
+/* some handy classes */
+a{
+    color: #999;
+}
+a:hover{
+    color: #FFC107;
+}
+.grey{
+    color: #999;
+}
+.is-center{
+    text-align: center;
+}
+.shadow{
+    -webkit-box-shadow: 0px 5px 5px -0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 5px -0px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 5px -0px rgba(0,0,0,0.3);
+}
+.transition{
+    transition: all .5s cubic-bezier(.3, 0, 0, 1.3)
+}
+
+
+
+
+/* will try to integrate flickr api */
+#img{
+    background:url(http://kristenvonbargen.com/wp-content/uploads/2013/11/camp.jpg) center no-repeat;
+    height: 10em;
+}
+
+
+#weather{
+    background-color: white;
+
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #333;
+    text-align: left;
+
+
+    padding: 2em;
+    height: 8em;
+    border-bottom: 0.1em solid #eee;
+
+    cursor: pointer;
+
+}
+
+
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+
+    max-width: 25em;
+
+    background-color: white;
+
+    transition: all 0.5s;
+}
+
+
+#find-wrapper{
+    cursor: pointer;
+    color: #999;
+    padding-right: 2em;
+
+}
+
+#find-wrapper:hover{
+    color: #333;
+
+}
+
+
+
+
+/* RIPPLE */
+.ripplelink{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #999;
+
+
+    display:block;
+    text-align:right;
+    text-decoration:none;
+    position:relative;
+    overflow:hidden;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    z-index:0;
+
+    width: 100%;
+
+    letter-spacing: 0.1em;
+
+    padding: 1em;
+    padding-right: 2em;
+}
+
+
+.ink {
+    display: block;
+    position: absolute;
+    background:rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+    -o-transform:scale(0);
+    transform:scale(0);
+}
+
+.animate {
+    -webkit-animation:ripple 0.65s linear;
+    -moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+    -o-animation:ripple 0.65s linear;
+    animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
